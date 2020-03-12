@@ -2,8 +2,30 @@
     display: flex;
     flex-direction: column;
     height: 100%;
-    background-image: url('../static/hackyourlife.png');
+    background-image: url('../static/hackyourlife_resize.png');
     background-repeat: no-repeat;
     background-size: 100% auto;
-    color: blue;
+}
+
+hr{
+    width: 100%;
+    border: solid 1px white;
+}
+
+.mainbox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    color: white;
+
+    &__applybox{
+        a{
+            text-decoration: none;
+        }
+        .button{
+            color: white;
+            border: solid 1px white;
+        }
+    }
 }
