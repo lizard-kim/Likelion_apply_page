@@ -19,10 +19,15 @@
     margin: 15px auto;
     color: white;
     &__logo{
-        //logo
+        h5{
+            font-weight: $bold;
+        }
     }
-
     &__menu{
         margin-left: 100px;
+        h6{
+            font-weight: $regular;
+        }
+
     }
 }

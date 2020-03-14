@@ -2,17 +2,26 @@ import React from 'react';
 import { Link } from 'react-router-dom'
 import hackyourlife_font from '../static/hackyourlife_font.png'
 import background from '../static/hackyourlife.png'
+import html from '../static/html.png'
+import css from '../static/css.png'
+import js from '../static/js.png'
+import python from '../static/python.png'
+import react from '../static/react.png'
+import django from '../static/django.png'
+import git from '../static/git.png'
+import Footer from './footer'
 import './main.scss';
 
-const ColoredLine = ({ color }) => (
+const ColoredLine = ({ color, wid, ali="left"}) => (
     <hr
         style={{
             color: color,
             backgroundColor: color,
             height: 3,
-            alignSelf: "left",
-            width: "70%",
-            margin: 0
+            alignSelf: ali,
+            width: wid,
+            margin: 0,
+            border: 0
         }}
     />
 );
@@ -47,7 +56,7 @@ class MainPage extends React.Component{
                 <div className="info">
                     <div className="info__title">
                         <h3 className="title"> 멋쟁이 사자처럼에서 <br/> 당신은 성장할 수 있습니다 </h3>
-                        <ColoredLine color="#F2A141" />
+                        <ColoredLine color="#F2A141" wid="70%"/>
                         <h4 className="text"> You can ... </h4>
                     </div>
                     <div className="info__content">
@@ -69,31 +78,41 @@ class MainPage extends React.Component{
                     </div>
                 </div>
                 <div className="curi">
+                    <div className="curi__title">
+                        <h3 className="text"> Curriculum </h3>
+                        <hr/>
+                        <p className="discription"> * 커리큘럼은 변동될 수 있습니다. </p>
+                    </div>
                     <div className="curi__card">
                         <div className="elem-top">
                             <div className="elem">
-                                <h1>hihi</h1>
+                                <img src={html} alt="html" className="logo"/>
                             </div>
                             <div className="elem">
-                                <h1>hihi</h1>
+                                <img src={css} alt="css" className="logo"/>
                             </div>
                             <div className="elem">
-                                <h1>hihi</h1>
+                                <img src={js} alt="js" className="logo"/>
+                            </div>
+                            <div className="elem">
+                                <img src={python} alt="python" className="logo"/>
                             </div>
                         </div>
                         <div className="elem-bottom">
                             <div className="elem">
-                                <h1>hihi</h1>
+                                <img src={react} alt="react" className="logo"/>
                             </div>
                             <div className="elem">
-                                <h1>hihi</h1>
+                                <img src={django} alt="django" className="logo"/>
                             </div>
+                            <div className="elem">
+                                <img src={git} alt="git" className="logo"/>
+                            </div>
+
                         </div>
                     </div>
-                    <div className="curi__title">
-                        <h5> title </h5>
-                    </div>
                 </div>
+                <Footer/>
             </div>
         )
     }
