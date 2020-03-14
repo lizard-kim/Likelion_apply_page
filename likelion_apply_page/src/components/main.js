@@ -56,6 +56,7 @@ class MainPage extends React.Component{
                 <div className="info">
                     <div className="info__title">
                         <h3 className="title"> 멋쟁이 사자처럼에서 <br/> 당신은 성장할 수 있습니다 </h3>
+                        <h4 className="title_mobile"> 멋쟁이 사자처럼에서는 ...</h4>
                         <ColoredLine color="#F2A141" wid="70%"/>
                         <h4 className="text"> You can ... </h4>
                     </div>

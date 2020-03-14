@@ -40,3 +40,13 @@
         }
     }
 }
+@media ( max-width: 767px ){
+    .footer{
+        .contents{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            margin: 0;
+        }
+    }
+}
