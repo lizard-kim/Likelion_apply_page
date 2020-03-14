@@ -7,10 +7,10 @@ class Header extends React.Component{
             <div className="header">
                 <div className="navbar">
                     <div className="navbar__logo">
-                        <h1> LIKE LION </h1>
+                        <h5> LIKE LION </h5>
                     </div>
                     <div className="navbar__menu">
-                        <h2> menu </h2>
+                        <h6> menu </h6>
                     </div>
                 </div>
             </div>
