@@ -1,6 +1,5 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import logo from './logo.svg';
 import Main from './components/main';
 import Apply from './components/apply';
 import Header from './components/header';
@@ -12,7 +11,6 @@ function App() {
       <div id="root_box">
         <Header/>
         <Switch>
-          
           <Route
             exact path="/"
             component={Main}

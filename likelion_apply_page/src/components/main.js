@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
 import hackyourlife_font from '../static/hackyourlife_font.png'
-import background from '../static/hackyourlife.png'
 import html from '../static/html.png'
 import css from '../static/css.png'
 import js from '../static/js.png'
@@ -34,18 +33,18 @@ class MainPage extends React.Component{
                 <div className="main">
                     <div className="mainbox">
                         <div className="mainbox__slogan">
-                            <img src={hackyourlife_font}/>
+                            <img src={hackyourlife_font} alt="mainimage"/>
                         </div>
                         <div className="mainbox__name">
                             <h4> 멋쟁이 사자처럼 8기 </h4>
                         </div>
                         <hr style={{width: "50%"}}/>
                         <div className="mainbox__duedate">
-                            <p> 모집기간 : 2020.03.14 ~ 2020.03.21 </p>
+                            <p> 모집기간 : 2020.03.16 ~ 2020.03.31 </p>
                         </div>
                         
                         <div className="mainbox__applybox">
-                            <Link to="/users">
+                            <Link to="/apply">
                                 <div className="button">
                                     <h5> Apply! </h5>
                                 </div>
