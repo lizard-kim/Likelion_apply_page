@@ -1,4 +1,7 @@
 import React from 'react';
+import axios from 'axios';
+import Cookies from 'js-cookie';
+
 import './apply.scss'
 
 class ApplyPage extends React.Component{
@@ -26,7 +29,28 @@ class ApplyPage extends React.Component{
         })
     }
 
-    //submitHandler
+    submitHandler = () =>{
+        let form_data = new FormData()
+        
+        form_data.set('name', this.state.name)
+        form_data.set('school_id', this.state.schoolId)
+        form_data.set('phone_number', this.state.phoneNumber)
+        form_data.set('email', this.state.email)
+        form_data.set('major', this.state.major)
+        form_data.set('tech_stack', this.state.techStack)
+        form_data.set('motivation', this.state.motivation)
+        form_data.set('idea', this.state.idea)
+
+        axios.post('http://127.0.0.1:8000/adminpage/apply/', form_data,{
+            headers: {
+                X_CSRFTOKEN: Cookies.get('csrftoken'),
+                'Content-Type': 'application/json',
+            }
+        }).then(res => {
+            console.log(res.data) 
+        }).catch(err=> console.log(err))
+
+    }
 
     render(){
         return(
@@ -78,7 +102,7 @@ class ApplyPage extends React.Component{
                             />
                         </div>
                         <div className="applyCard__buttonwrapper">
-                            <button className="submit">
+                            <button className="submit" onClick={this.submitHandler}>
                                 제출하기
                             </button>
                         </div>

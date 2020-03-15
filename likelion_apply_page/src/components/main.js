@@ -40,11 +40,12 @@ class MainPage extends React.Component{
                         </div>
                         <hr style={{width: "50%"}}/>
                         <div className="mainbox__duedate">
-                            <p> 모집기간 : 2020.03.16 ~ 2020.03.31 </p>
+                            <p> 사이트 준비 중 입니다 </p>
                         </div>
                         
                         <div className="mainbox__applybox">
-                            <Link to="/apply">
+                            <Link to="#">
+                            {/*<Link to="/apply">*/}
                                 <div className="button">
                                     <h5> Apply! </h5>
                                 </div>
